@@ -1,5 +1,6 @@
 const { createReport } = require('docx-templates')
 const fs = require('fs')
+const path = require("path");
 
 require('dotenv').config()
 const { MailtrapClient } = require("mailtrap");
@@ -19,6 +20,8 @@ const sendEmail = async(receivers, subject, content, category) => {
       recipients.push({ email: receivers[x] })
     }
 
+    const saftfile = fs.readFileSync(path.join(__dirname, "output.docx"));
+
     var ret = await client.send({
       from: sender,
       to: recipients,
@@ -27,8 +30,10 @@ const sendEmail = async(receivers, subject, content, category) => {
       category: category,
       attachments: [
         { 
-          filename: 'saft.doxc',
-          path: './output.docx'
+          filename: "saft.docx",
+          content_id: "saft.docx",
+          disposition: "inline",
+          content: saftfile
         }
       ]
     })
