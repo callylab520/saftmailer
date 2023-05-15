@@ -13,6 +13,7 @@
     "docx-templates": "^4.11.1",
     "docxtemplater": "^3.37.7",
     "docxtemplater-image-module": "^3.1.0",
+    "dotenv": "^16.0.3",
     "image-size": "^1.0.2",
     "mailtrap": "^3.1.1",
     "pizzip": "^3.1.4"
