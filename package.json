@@ -1,0 +1,20 @@
+{
+  "name": "docx_email",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "docx-templates": "^4.11.1",
+    "docxtemplater": "^3.37.7",
+    "docxtemplater-image-module": "^3.1.0",
+    "image-size": "^1.0.2",
+    "mailtrap": "^3.1.1",
+    "pizzip": "^3.1.4"
+  }
+}
